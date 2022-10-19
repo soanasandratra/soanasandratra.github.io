@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+}
+
+div{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: skyblue;
+  border-top: 20px solid red;
+  border-bottom: 20px solid red;
+  border-left: 20px solid hwb(261 0% 0%);
+  border-right: 20px solid rgb(9, 255, 0);
+  border-radius: 50%;
+}
