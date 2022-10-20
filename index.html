@@ -3,11 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/logo.png" />
     <link rel="stylesheet" href="style.css" />
-    <title>Back to The Lab</title>
+    <title>Soanasandratra Accueil</title>
   </head>
   <body>
-    <div></div>
+    <div class="header">
+      <div id="mobile-head">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </div>
+        <div class="btn-menu">
+          <img src="./assets/images/hamburger.png" alt="menu" />
+        </div>
+      </div>
+      <div class="nav-container">
+        <div class="nav">
+          <a href="#accueil">Accueil</a>
+          <a href="#parcours">Parcours</a>
+          <a href="#competence">Compétences</a>
+          <a href="#contact-section">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div id="accueil">
+      <div id="photoAccueil">
+        <img src="./assets/images/me.jpg" alt="monPhoto" />
+      </div>
+      <div id="intro">
+        <h1>Welcome !</h1>
+        <p>I'm <br /><span id="myName">Razakarimanana Soanasandratra</span>,</p>
+        <p>FullStack Developper</p>
+      </div>
+    </div>
+
+    <div id="parcours">
+      <h1>Parcours</h1>
+
+      <div id="parcours-container">
+        <div class="college-primaire parcour">
+          <h2>College</h2>
+          <h3>2018</h3>
+          <p>Obtention du diplôme BEPC</p>
+        </div>
+        <div class="high-school parcour">
+          <h2>High School</h2>
+          <h3>2021</h3>
+          <p>Obtention du diplôme Baccalauréat serie S</p>
+          <h3>2018-2021</h3>
+          <p>Etudiant du Lycée Rakotoarisoa Ambositra</p>
+        </div>
+        <div class="university parcour">
+          <h2>University</h2>
+          <h3>2022</h3>
+          <p>
+            Etudiant de l'Ecole de Management et d'innovation Technologique,
+            parcours Developpement d'application Internet/Intranet
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="competence">
+      <h2>Language de programmation</h2>
+      <div class="competences">
+        <div class="html langage">83%<br />Html</div>
+        <div class="css langage">76%<br />Css</div>
+        <div class="javascript langage">46%<br />JavaScript</div>
+      </div>
+
+      <div class="projet-developpe">
+        <h2>Projets developpés</h2>
+        <div class="projects">
+          <div class="project">
+            <div class="img-project img1">
+              <img src="./assets/images/gestion.jpg" alt="images" />
+            </div>
+            <div class="description-project desc1">
+              <h2>
+                Base de données : Gestion de ventes de matériels informatiques
+              </h2>
+              <p>
+                Ce projet consiste premièrement à appliquer les connaissances
+                théoriques obténus durant le cours à l' ecole, ainsi pour savoir
+                la réalité d'une entreprise et la construction d'un logiciel.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="description-project desc2">
+              <h2>Quiz game : Deviner un couleur rgb()</h2>
+              <p>
+                Ce petit jeu est fait pour s'amuser pour les informaticiens qui
+                connaissent un peu le couleur rgb() , mais a pour but
+                d'appliquer le JavaScript.
+              </p>
+            </div>
+            <div class="img-project img2">
+              <img src="./assets/images/quizColorGame.PNG" alt="images" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-section">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div class="form">
+          <input type="text" name="nom" id="nom" placeholder="votre nom" />
+          <input type="mail" name="mail" id="mail" placeholder="votre email" />
+          <textarea
+            name="message"
+            rows="10"
+            placeholder="votre message"
+          ></textarea>
+          <input type="button" value="Envoyer" />
+        </div>
+        <div class="my-contact">
+          <p><span>Adress : </span>Iajaky Ambositra</p>
+          <p><span>Tel : </span>0323829900</p>
+          <p><span>facebook : </span>Soanasandratra Razakarimanana</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript import -->
+
+    <script src="./index.js"></script>
   </body>
 </html>

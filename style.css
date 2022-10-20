@@ -1,15 +1,348 @@
-body{
-  margin: 0;
+@font-face {
+  font-family: maFont;
+  src: url(./assets/font/Dosis-Medium.ttf);
 }
 
-div{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: skyblue;
-  border-top: 20px solid red;
-  border-bottom: 20px solid red;
-  border-left: 20px solid hwb(261 0% 0%);
-  border-right: 20px solid rgb(9, 255, 0);
+body {
+  margin: 0;
+  font-family: maFont;
+  background: rgb(214, 214, 214);
+}
+
+/* -------------all code-------------- */
+
+.logo {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(2, 5, 202);
+}
+
+/* -------------Accueil Area--------------- */
+#accueil {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: url(./assets/images/bgAccueil.jpg) center/cover;
+}
+
+#photoAccueil img {
+  width: 100%;
+  height: 200px;
+  border: 5px solid rgba(0, 255, 200, 0.308);
   border-radius: 50%;
+}
+
+#intro {
+  padding: 10px;
+  color: white;
+}
+#intro p span {
+  color: red;
+}
+
+/* -------------Parcours---------- */
+
+#parcours-container {
+  display: grid;
+}
+#parcours h1,
+#competence h2 {
+  color: rgb(0, 72, 206);
+  font-style: italic;
+  text-align: center;
+}
+
+.parcour {
+  background: rgb(182, 182, 182);
+  padding: 10px;
+  border: 0;
+  border-radius: 0.1rem;
+}
+.parcour h2 {
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.parcour h3 {
+  color: white;
+}
+
+/* ---------------Compétences------------ */
+.competences {
+  margin: 10px;
+}
+
+.langage {
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: 4px solid skyblue;
+  border-radius: 50%;
+}
+
+.projects {
+  padding: 10px;
+}
+
+.project {
+  background: rgb(230, 227, 227);
+  padding: 10px;
+}
+
+.img-project {
+  width: 100%;
+}
+
+.img-project img {
+  width: 100%;
+  height: 300px;
+}
+
+/* ----------------contact----------- */
+#contact-section {
+  padding: 10px;
+}
+
+#contact-section h2 {
+  text-align: center;
+  color: blue;
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "nom mail"
+    "mess mess"
+    "btn btn";
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  padding: 10px;
+}
+
+#nom {
+  grid-area: nom;
+}
+#mail {
+  grid-area: mail;
+}
+
+textarea {
+  grid-area: mess;
+  height: 40px;
+  resize: none;
+}
+
+#nom,
+#mail,
+textarea {
+  border: 1px solid skyblue;
+  border-radius: 0.2rem;
+}
+input[type="button"] {
+  grid-area: btn;
+  background: rgb(255, 252, 252);
+  color: skyblue;
+  font-size: 1.4rem;
+  border: 2px solid skyblue;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+input[type="button"]:hover {
+  background: rgb(224, 224, 224);
+}
+
+.my-contact {
+  text-align: center;
+  background: white;
+}
+
+.my-contact span {
+  color: red;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+/* -------style by media------------ */
+@media only screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgb(255, 230, 230);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #mobile-head {
+    width: 30%;
+  }
+
+  .header .btn-menu {
+    display: none;
+  }
+  .nav-container {
+    display: block;
+  }
+  .nav {
+    padding: 10px 20px;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  /* accueil */
+  #accueil {
+    flex-direction: row;
+  }
+  #intro h1 {
+    font-size: 2.5rem;
+  }
+  #intro p {
+    font-size: 1.2rem;
+  }
+
+  #intro p span {
+    font-size: 1.3rem;
+  }
+
+  /* pour le parcours */
+
+  #parcours-container {
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    margin: 10px auto;
+  }
+
+  .parcour h3 {
+    font-size: 1.5rem;
+  }
+  .parcour p {
+    font-size: 1.1rem;
+  }
+
+  /* competences */
+  .competences {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+  }
+
+  .langage {
+    width: 250px;
+    height: 250px;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-around;
+  }
+
+  /* contact */
+
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #mobile-head {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgb(255, 230, 230);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  .btn-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-container {
+    display: none;
+    padding: 30px 0;
+    width: 100%;
+    position: fixed;
+    top: 20px;
+    text-align: center;
+  }
+  .nav {
+    background: rgb(0, 163, 101);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav a {
+    padding: 10px;
+  }
+
+  .nav a:hover {
+    background: rgb(0, 158, 111);
+    color: white;
+  }
+
+  /* competences */
+  .competences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .langage {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "desc1"
+      "img1"
+      "desc2"
+      "img2";
+    justify-content: space-around;
+  }
+  .desc1 {
+    grid-area: desc1;
+  }
+  .desc2 {
+    grid-area: desc2;
+  }
+  .img1 {
+    grid-area: img1;
+  }
+  .img2 {
+    grid-area: img2;
+  }
 }
